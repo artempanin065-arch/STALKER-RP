@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.75)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    overflow-x:hidden;
+}
+
+/* Заголовок */
+
+header{
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:70px;
+    color:#ff9800;
+    text-shadow:
+    0 0 10px #ff9800,
+    0 0 30px #ff9800,
+    0 0 50px #ff9800;
+}
+
+/* Главный блок */
+
+.hero{
+    min-height:75vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 10%;
+}
+
+.content{
+    max-width:650px;
+}
+
+.content h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:40px;
+}
+
+/* Кнопки */
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.register{
+    text-decoration:none;
+    color:white;
+
+    background:#ff9800;
+
+    padding:16px 35px;
+    border-radius:12px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 15px #ff9800;
+}
+
+.register:hover{
+    transform:translateY(-5px);
+}
+
+.play{
+    text-decoration:none;
+    color:white;
+
+    background:#27ae60;
+
+    padding:16px 35px;
+    border-radius:12px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 15px #27ae60;
+}
+
+.play:hover{
+    transform:translateY(-5px);
+}
+
+/* Персонаж */
+
+.character img{
+    width:450px;
+
+    animation:float 3s ease-in-out infinite;
+
+    filter:
+    drop-shadow(0 0 20px rgba(255,152,0,.4));
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+}
+
+/* Низ сайта */
+
+footer{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+
+    gap:30px;
+
+    padding:25px;
+
+    background:rgba(0,0,0,.8);
+}
+
+/* Telegram */
+
+.telegram{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:22px;
+    font-weight:bold;
+
+    padding:18px 40px;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    145deg,
+    #3dbbff,
+    #0088cc);
+
+    box-shadow:
+    0 0 20px #00aaff,
+    0 0 40px rgba(0,170,255,.5);
+
+    transition:.3s;
+}
+
+.telegram:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+}
+
+/* Discord Сталкер */
+
+.discord{
+
+    text-decoration:none;
+
+    color:#ffb300;
+
+    font-size:22px;
+    font-weight:bold;
+
+    padding:18px 40px;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    145deg,
+    #1a1a1a,
+    #2f2f2f);
+
+    border:2px solid #ff9800;
+
+    box-shadow:
+    0 0 15px #ff9800,
+    inset 0 0 10px rgba(255,152,0,.3);
+
+    transition:.3s;
+}
+
+.discord:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 0 25px #ff9800,
+    0 0 45px rgba(255,152,0,.5);
+}
+
+/* Телефон */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.character img{
+    width:300px;
+    margin-top:40px;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+footer{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
